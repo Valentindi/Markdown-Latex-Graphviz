@@ -15,4 +15,4 @@ look at test.md and test.pdf
 
 bash md-latex.sh  test.md 
 
-*Yes, this readme has yet to be completed*
+*Yes, this readme is not complete yet*
