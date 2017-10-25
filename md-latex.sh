@@ -19,22 +19,39 @@ LATEX="$FILENAME2.tex"
 
 PDF="$FILENAME2.pdf"
 
+echo "."
 
 
 
 echo "Generating TEX"
+echo ".."
 
 pandoc --from Markdown --to latex -s md-latex.yaml $IN > $LATEX 
+echo "..."
 
 echo "Generating PDF"
+echo "...."
 
-#pandoc  --latex-engine=xelatex --latex-engine-opt=-shell-escape $LATEX
+pandoc  --latex-engine=xelatex --latex-engine-opt=-shell-escape $LATEX
 
 #pandoc  --latex-engine=xelatex --from latex --to pdf -t latex $LATEX -o $PDF md-latex.yaml
+echo "....."
 
 xelatex -shell-escape $LATEX
-
+echo "......"
 xelatex $LATEX > $PDF
+echo "......."
+
+pandoc  --latex-engine=xelatex --latex-engine-opt=-shell-escape $LATEX
+
+#pandoc  --latex-engine=xelatex --from latex --to pdf -t latex $LATEX -o $PDF md-latex.yaml
+echo "....."
+
+xelatex -shell-escape $LATEX
+echo "......"
+xelatex $LATEX > $PDF
+echo "......."
+
 
 echo "Ready"
 
