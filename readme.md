@@ -1,7 +1,7 @@
-##Description
+## Description
 Realy simple Bash-Script to create PDFs from Markdown with Latex (e.g. Formulas) and Graphviz Components
 
-##Requirements
+## Requirements
 - pandoc
 - xelatex
 - graphviz
